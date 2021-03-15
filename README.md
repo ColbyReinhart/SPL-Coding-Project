@@ -1,0 +1,2 @@
+# SPL-Coding-Project
+This repo contains all associated materials for the Structure of Programming Languages Coding Project
