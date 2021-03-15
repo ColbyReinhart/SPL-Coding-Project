@@ -1,4 +1,4 @@
-// Palindrome Checker
+// Palindrome Checker - C++
 // Structure of Programming Languages - Coding Project
 // Written by Colby Reinhart
 // 3-15-2021
