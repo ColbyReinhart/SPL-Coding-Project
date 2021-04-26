@@ -28,7 +28,9 @@ overall allows for better error detection and understandability of code.
 
 // This is the factorial class used to compute factorials. Object-oriented
 // programming uses classes with data and its related methods to achieve
-// a certain task.
+// a certain task. The data in the factorial class is the value to be computed,
+// the result of the computation, and whether or not the current value has been
+// computed already
 class Factorial
 {
 public:
@@ -83,6 +85,9 @@ int main()
 	// can be casted to be assigned to this variable, but one cannot assign, for example,
 	// a string, character, or user defined type to this variable
 	// input = "Hello world!" would cause an error
+	// This variable must be declared with a given type or an error will be thrown. It is
+	// impossible to cast this variable to a different type, but its r-value data may be
+	// casted and assigned to another variable of the casted type
 	long input;
 
 	std::cin >> input;
