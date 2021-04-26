@@ -9,6 +9,7 @@
 /*
 OBJECT-ORIENTED:
 Object-oriented means using objects and message passing to achieve a goal.
+Object-oriented programming is a type of imperative programming paradigm.
 This factorial program using object-oriented programming by implementing a
 Factorial class. The class computes a factorial and remembers to result,
 such that it does not recompute the result if compute() is called on the
@@ -18,16 +19,23 @@ MANUAL GARBAGE COLLECTION:
 Dynamic data and data structures in C++ are always manually allocated and
 deleted. Any dynamic memory that is not explicitly deleted by the programmer
 after the data leaves its scope is leaked.
+
+STATIC TYPING
+C++ is statically typed, meaning that every named datum requires an explicit
+type at declaration. This somewhat restricts the programmer in some ways but
+overall allows for better error detection and understandability of code.
 */
 
-// Factorial class used to compute factorials: object-oriented
+// This is the factorial class used to compute factorials. Object-oriented
+// programming uses classes with data and its related methods to achieve
+// a certain task.
 class Factorial
 {
 public:
 	// Constructor
-	Factorial(): value_(0), isComputed_(false) {}
+	Factorial(): value_(0), result_(0), isComputed_(false) {}
 	// Sets the value to be computed
-	void setValue(int value)
+	void setValue(long value)
 	{
 		if (value_ != value)
 		{
@@ -36,16 +44,13 @@ public:
 		}
 	}
 	// Computes the result of the given value
-	int compute()
+	long compute()
 	{
 		// If we already know the answer, don't waste time computing
 		if (isComputed_)
-		{
-			std::cout << "the same as last time, ";
 			return result_;
-		}
 
-		int number = value_;
+		long number = value_;
 		result_ = 1;
 		while (number > 1)
 		{
@@ -58,8 +63,9 @@ public:
 	}
 
 private:
-	int value_; // the value to be computed
-	int result_; // the remembered result of the last computation
+	// member variables of the class
+	long value_; // the value to be computed
+	long result_; // the remembered result of the last computation
 	bool isComputed_; // has the current value been computed yet?
 };
 
@@ -72,7 +78,13 @@ int main()
 	std::list<int> factorialList;
 
 	std::cout << "Please enter values to find factorial of [-1 to stop]" << std::endl;
-	int input;
+
+	// All variables in C++ are statically typed. Some types, such as integer and double,
+	// can be casted to be assigned to this variable, but one cannot assign, for example,
+	// a string, character, or user defined type to this variable
+	// input = "Hello world!" would cause an error
+	long input;
+
 	std::cin >> input;
 	while (input != -1)
 	{
