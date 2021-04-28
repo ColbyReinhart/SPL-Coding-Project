@@ -44,11 +44,11 @@ def compute(value):
 		value = value - 1
 	return result
 
-# All variables in python are stored on the heap. Generational garbage collection
-# automatically deletes all dynamic data structures at the appropriate time and
-# ensures that the programmer does not need to manually delete them. In a language
-# with no garbage collection like C++, this data structure would need to be deleted
-# manually.
+# factorialList, as well as other dynamic objects, are stored on the heap in Python.
+# Generational garbage collection automatically deletes all dynamic data structures
+# at the appropriate time and ensures that the programmer does not need to manually
+# delete them. In a language with no garbage collection like C++, this data structure
+# would need to be deleted manually.
 factorialList = []
 # Take in user input
 userInput = input("Please enter values to find factorial of [-1 to stop]\n")
