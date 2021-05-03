@@ -32,11 +32,11 @@ readability.
 
 """
 
-# This funciton will take in a value, compute the factorial, and return the output
+# This funciton will take in a value, compute the factorial, and return the output.
 # This program uses the procedural program paradigm by using this function/procedure
 # to accomplish the task of finding the factorial of a number. Procedural programming
 # uses functions like these to accomplish tasks without implementing repetitive and/or
-# unnecessary code
+# unnecessary code.
 def compute(value):
 	result = 1
 	while (value > 1):

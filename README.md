@@ -13,4 +13,4 @@ Different Concepts:
 
 	Manual garbage collection (C++) vs generational garbage collection (Python)
 	
-	Object-Oriented (C++) vs Procedural (Python)
+	Object-oriented (C++) vs procedural (Python)

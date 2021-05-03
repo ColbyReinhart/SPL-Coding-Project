@@ -11,7 +11,7 @@ OBJECT-ORIENTED:
 Object-oriented means using objects and message passing to achieve a goal.
 Object-oriented programming is a type of imperative programming paradigm.
 This factorial program using object-oriented programming by implementing a
-Factorial class. The class computes a factorial and remembers to result,
+Factorial class. The class computes a factorial and remembers the result,
 such that it does not recompute the result if compute() is called on the
 same value.
 
@@ -30,7 +30,8 @@ overall allows for better error detection and understandability of code.
 // programming uses classes with data and its related methods to achieve
 // a certain task. The data in the factorial class is the value to be computed,
 // the result of the computation, and whether or not the current value has been
-// computed already
+// computed already. The methods set the value to be computed and compute
+// the factorial
 class Factorial
 {
 public:
@@ -84,7 +85,8 @@ int main()
 	// All variables in C++ are statically typed. Some types, such as integer and double,
 	// can be casted to be assigned to this variable, but one cannot assign, for example,
 	// a string, character, or user defined type to this variable
-	// input = "Hello world!" would cause an error
+	// long input = "Hello world!" would cause an error
+	// std::string input = "Hello world!" successfully stores the string literal as type string.
 	// This variable must be declared with a given type or an error will be thrown. It is
 	// impossible to cast this variable to a different type, but its r-value data may be
 	// casted and assigned to another variable of the casted type
